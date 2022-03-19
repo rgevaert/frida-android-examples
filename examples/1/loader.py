@@ -12,4 +12,4 @@ with open("s1.js") as f:
 script.load()
 
 # prevent the python script from terminating
-raw_input()
+input()

@@ -10,12 +10,12 @@ Java.perform(function x() {
     var string_class = Java.use("java.lang.String");
 
     my_class.fun.overload("java.lang.String").implementation = function (x) { //hooking the new function
-        console.log("*************************************")
+        console.log("*************************************");
         var my_string = string_class.$new("My TeSt String#####");
         console.log("Original arg: " + x);
         var ret = this.fun(my_string);
         console.log("Return value: " + ret);
-        console.log("*************************************")
+        console.log("*************************************");
         return ret;
     };
     Java.choose("com.example.a11x256.frida_test.my_activity", {

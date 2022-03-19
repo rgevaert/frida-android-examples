@@ -4,8 +4,8 @@ import frida
 
 
 def my_message_handler(message, payload):
-    print message
-    print payload
+    print(message)
+    print(payload)
 
 
 device = frida.get_usb_device()
@@ -19,4 +19,4 @@ script.on("message", my_message_handler)
 script.load()
 
 # prevent the python script from terminating
-raw_input()
+input()
